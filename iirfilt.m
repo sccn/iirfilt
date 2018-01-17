@@ -56,8 +56,9 @@ if nargin<4
     return
 end
 
-a = 0;
-b = 0;
+a.al = []; a.ah = []; % Initialization has to be as sctruct since reasignment of scalar to a sctruct is not allowed since version R2016
+b.al = 0;  b.bh = [];
+
 data = double(data);
 
 if exist('ellipord') ~= 2 | exist('ellip') ~= 2
