@@ -1,2 +1,2 @@
 # iirfilt
-Non linear filter for EEGLAB
+Non linear filter EEGLAB plugin
