@@ -137,9 +137,14 @@ end;
 % process multiple datasets
 % -------------------------
 if length(EEG) > 1
-   [ EEG com ] = eeg_eval( 'pop_iirfilt', EEG, 'warning', 'on', 'params', ...
+    if nargin < 2
+        [ EEG com ] = eeg_eval( 'pop_iirfilt', EEG, 'warning', 'on', 'params', ...
                            { locutoff, hicutoff, trans_bw, revfilt } );
-   return;
+    else
+        [ EEG com ] = eeg_eval( 'pop_iirfilt', EEG, 'params', ...
+                           { locutoff, hicutoff, trans_bw, revfilt } );
+    end
+    return;
 end;
 
 if EEG.trials == 1 
