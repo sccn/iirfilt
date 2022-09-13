@@ -143,7 +143,7 @@ if length(EEG) > 1
         [ EEG, com ] = eeg_eval( 'pop_iirfilt', EEG, 'params', { locutoff, hicutoff, trans_bw, revfilt } );
    end
    return;
-end
+end;
 
 if EEG.trials == 1 
 	if ~isempty(EEG.event) && isfield(EEG.event, 'type') && isstr(EEG.event(1).type)
