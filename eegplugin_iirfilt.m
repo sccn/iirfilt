@@ -33,7 +33,7 @@
 
 function vers = eegplugin_iirfilt(fig, trystrs, catchstrs)
     
-    vers = 'iirfilt1.04';
+  vers = 'iirfilt1.05';
   if nargin < 3
       error('eegplugin_iirfilt requires 3 arguments');
   end;
@@ -56,4 +56,4 @@ function vers = eegplugin_iirfilt(fig, trystrs, catchstrs)
   
   % create menus if necessary
   % -------------------------
-  uimenu( menu, 'Label', 'Short IIR filter',  'CallBack', combio, 'Separator', 'on'); 
+  uimenu( menu, 'Label', 'Short IIR filter',  'CallBack', combio, 'Separator', 'on', 'userdata', 'study:on'); 
